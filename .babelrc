@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "lodash",
+    [
+      "ramda",
+      {
+        "usesES": true
+      }
+    ]
+  ],
+  "presets": ["@babel/preset-env"]
+}
