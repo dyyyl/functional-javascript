@@ -1,8 +1,9 @@
-import { add } from 'lodash/fp';
-import { map } from 'ramda';
+import { chain } from 'lodash';
 
-const addOne = add(1);
+import users from './lib/userApi'; // eslint-disable-line
 
-const mapArray = map(addOne, [1, 2, 3]);
+const youngishNonAmericans = chain(users)
+  .filter((user) => user.birthYear > 1990 && user.address.country !== 'USA')
+  .value();
 
-console.log(mapArray);
+console.log(youngishNonAmericans);
