@@ -2,9 +2,10 @@
   "extends": [
     "eslint:recommended",
     "plugin:node/recommended",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["jest"],
+  "plugins": ["jest", "prettier", "@typescript-eslint"],
   "rules": {
     "node/exports-style": ["error", "module.exports"],
     "node/prefer-global/buffer": ["error", "always"],
@@ -13,15 +14,23 @@
     "node/prefer-global/url-search-params": ["error", "always"],
     "node/prefer-global/url": ["error", "always"],
     "node/no-unsupported-features/es-syntax": 0,
-    "no-console": 0,
-    "node/no-unpublished-import": [
-      "error",
-      {
-        "allowModules": ["aws-sdk"]
-      }
-    ]
+    "no-console": 0
   },
   "parserOptions": {
     "sourceType": "module"
-  }
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      },
+      "typescript": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "parser": "@typescript-eslint/parser"
 }
