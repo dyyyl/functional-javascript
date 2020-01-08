@@ -1,4 +1,4 @@
-import users, { generateUser, generateUsersByAmount } from './index'; // eslint-disable-line
+import users, { generateUser, generateUsersByAmount } from './index';
 
 describe('userApi lib:', () => {
   it('should return an array of users', () => {

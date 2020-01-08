@@ -9,6 +9,7 @@
   ],
   "plugins": ["jest", "prettier", "@typescript-eslint", "import"],
   "rules": {
+    "node/no-missing-import": 0,
     "node/exports-style": ["error", "module.exports"],
     "node/prefer-global/buffer": ["error", "always"],
     "node/prefer-global/console": ["error", "always"],

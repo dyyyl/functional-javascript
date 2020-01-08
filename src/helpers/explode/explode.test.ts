@@ -1,5 +1,4 @@
-import explode from './index'; // eslint-disable-line
-
+import explode from './index';
 describe('explode function:', () => {
   it('should return an array of elements, given an input', () => {
     const string =

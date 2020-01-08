@@ -1,7 +1,6 @@
 import faker from 'faker';
 
-import normalizeDate from '../../helpers/normalizeDate'; // eslint-disable-line
-
+import normalizeDate from '../../helpers/normalizeDate';
 interface Address {
   country: string;
   city: string;

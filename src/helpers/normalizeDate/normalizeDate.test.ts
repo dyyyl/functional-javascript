@@ -1,5 +1,4 @@
-import normalizeDate from './index'; // eslint-disable-line
-
+import normalizeDate from './index';
 describe('normalizeDate function:', () => {
   const currentYear = new Date().getFullYear();
   const date = new Date();

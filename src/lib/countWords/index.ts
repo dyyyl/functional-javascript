@@ -1,7 +1,7 @@
 import { compose } from 'ramda';
 
-import count from '../../helpers/count'; // eslint-disable-line
-import explode from '../../helpers/explode'; // eslint-disable-line
+import count from '../../helpers/count';
+import explode from '../../helpers/explode';
 
 const countWords = compose(count, explode);
 

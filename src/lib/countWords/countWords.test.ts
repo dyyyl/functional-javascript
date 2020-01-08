@@ -1,4 +1,4 @@
-import countWords from './index'; // eslint-disable-line
+import countWords from './index';
 
 describe('countWords lib:', () => {
   it('should return the length of a given string', () => {

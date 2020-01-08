@@ -1,7 +1,7 @@
 import { chain } from 'lodash';
 
-import countWords from './lib/countWords'; // eslint-disable-line
-import users from './lib/userApi'; // eslint-disable-line
+import countWords from './lib/countWords';
+import users from './lib/userApi';
 
 const string =
   'We can only see a short distance ahead but we can see plenty there that needs to be done';
