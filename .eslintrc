@@ -3,9 +3,11 @@
     "eslint:recommended",
     "plugin:node/recommended",
     "plugin:jest/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/typescript"
   ],
-  "plugins": ["jest", "prettier", "@typescript-eslint"],
+  "plugins": ["jest", "prettier", "@typescript-eslint", "import"],
   "rules": {
     "node/exports-style": ["error", "module.exports"],
     "node/prefer-global/buffer": ["error", "always"],
@@ -21,14 +23,16 @@
   },
   "settings": {
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "@typescript-eslint/parser": [".ts"]
     },
     "import/resolver": {
       "node": {
-        "paths": ["src"]
+        "paths": ["src"],
+        "extensions": [".js", ".ts", ".test.ts"]
       },
       "typescript": {
-        "paths": ["src"]
+        "paths": ["src"],
+        "extensions": [".js", ".ts", ".test.ts"]
       }
     }
   },

@@ -10,10 +10,12 @@
     "faker": "^4.1.0",
     "lodash": "^4.17.15",
     "ramda": "^0.26.1",
-    "rx-node": "^1.0.2"
+    "rx-node": "^1.0.2",
+    "ts-jest": "^24.3.0"
   },
   "devDependencies": {
     "@types/faker": "^4.1.8",
+    "@types/jest": "^24.0.25",
     "@types/lodash": "^4.14.149",
     "@types/node": "^13.1.2",
     "@types/ramda": "^0.26.39",
@@ -21,6 +23,7 @@
     "@typescript-eslint/parser": "^2.15.0",
     "eslint": "^6.8.0",
     "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jest": "^23.2.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.1.2",
@@ -33,5 +36,20 @@
   "scripts": {
     "start": "nodemon",
     "test": "jest"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "./node_modules/ts-jest"
+    },
+    "testEnvironment": "node"
   }
 }

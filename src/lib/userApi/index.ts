@@ -1,5 +1,7 @@
 import faker from 'faker';
 
+import normalizeDate from '../../helpers/normalizeDate'; // eslint-disable-line
+
 interface Address {
   country: string;
   city: string;
@@ -12,23 +14,17 @@ interface User {
   address: Address;
 }
 
-const generateUser = (): User => ({
+export const generateUser = (): User => ({
   firstName: faker.name.firstName(),
   lastName: faker.name.lastName(),
-  birthYear: parseInt(
-    faker.date
-      .past(70)
-      .toString()
-      .split(' ')[3],
-    10,
-  ),
+  birthYear: normalizeDate(faker.date.past(70)),
   address: {
     country: faker.address.country(),
     city: faker.address.city(),
   },
 });
 
-const generateUsersByAmount = (amount: number): Array<User> =>
+export const generateUsersByAmount = (amount: number): Array<User> =>
   Array(amount)
     .fill(null)
     .map(() => generateUser());
