@@ -5,6 +5,10 @@ describe('userApi lib:', () => {
     expect(Array.isArray(users)).toBe(true);
   });
 
+  it('should return an array of exactly 10 users', () => {
+    expect(users.length).toBe(10);
+  });
+
   describe('generateUser function:', () => {
     it('should return a user object', () => {
       const user = generateUser();
